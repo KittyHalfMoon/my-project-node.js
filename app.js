@@ -17,7 +17,7 @@ app.get("/",(req,res)=>{
 })
 
 app.listen(port, ()=>{
-    console.log('Lisening Porttt',chalk.red(port)); //just plain txt
+    console.log('Lisening Porttttt',chalk.red(port)); //just plain txt
     debug('Lisening Port',port); 
 })
 
