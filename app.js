@@ -9,10 +9,12 @@ const express = require('express');
 const app = express();
 // port
 const port = 3000;
+const path = require('path')
 
 app.use(morgan('combined'))
+app.use(express.static(path.join(__dirname,'/public/')));  // html
 
-app.get("/",(req,res)=>{
+app.get("/",(req,res)=>{            //if don't have static file
     res.send( '<h1>hello world</h1>')
 })
 
