@@ -8,7 +8,7 @@ const morgan = require('morgan')
 const express = require('express');
 const app = express();
 // port
-const port = 3000;
+const PORT = process.env.PORT;
 const path = require('path')
 
 app.use(morgan('combined'))
@@ -18,9 +18,9 @@ app.get("/",(req,res)=>{            //if don't have static file
     res.send( '<h1>hello world</h1>')
 })
 
-app.listen(port, ()=>{
-    console.log('Lisening Porttttt',chalk.red(port)); //just plain txt
-    debug('Lisening Port',port); 
+app.listen(PORT, ()=>{
+    console.log('Lisening Port1',chalk.red(PORT)); //just plain txt
+    debug('Lisening Port',PORT); 
 })
 
 
